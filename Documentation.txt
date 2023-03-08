@@ -1,0 +1,31 @@
+Documentation for the Phone Keypad Decoder Program
+
+This program is a phone keypad decoder that converts a sequence of numbers entered on a keypad into corresponding letters of the alphabet. It is designed to mimic the behavior of old cell phone keypads where each number key is assigned multiple letters.
+
+The program is written in C# using .NET Framework and utilizes the System.Runtime.InteropServices library.
+
+Functionality:
+
+The program defines a dictionary that maps numbers to letters, and a function called checkSequence that takes a string input and returns the corresponding sequence of letters.
+
+The checkSequence function works by iterating over the input string and checking if there are consecutive identical numbers. If there are, it appends them to an output string called outputText. If the characters change, it uses the outputText to look up the corresponding letter in the NumberToLetterMap dictionary and appends it to a result string. It then resets the outputText variable and continues with the next iteration.
+
+In addition to converting numbers to letters, the program also handles special characters on the keypad. For instance, if the '*' character is encountered, the program will delete the previous character from the result string. If a space character is encountered, the program will clear the outputText variable and move on to the next character. If the '#' character is encountered, the program will add the last letter to the result string and exit the loop.
+
+Usage:
+
+The program comes with a main method that demonstrates the usage of the checkSequence function with various test cases. To use the program, simply run the Main method and view the output.
+
+Test Cases:
+
+The following test cases are included in the Main method:
+
+checkSequence("33#") should return "E"
+checkSequence("227*#") should return "B"
+checkSequence("4433555 555666#") should return "HELLO"
+checkSequence("8 88777444666*664#") should return "TURING"
+checkSequence("11 2 1 33* 3* 5#") should return "'AJ"
+checkSequence("1102233* 34333#") should return "`BDGF"
+Conclusion:
+
+This program provides a simple implementation of a phone keypad decoder that can be used in various applications where users need to input text using a numeric keypad. The program is easy to use and modify, making it a useful tool for developers.
