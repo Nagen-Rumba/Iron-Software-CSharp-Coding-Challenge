@@ -1,5 +1,3 @@
-Documentation for the Phone Keypad Decoder Program
-
 This program is a phone keypad decoder that converts a sequence of numbers entered on a keypad into corresponding letters of the alphabet. It is designed to mimic the behavior of old cell phone keypads where each number key is assigned multiple letters.
 
 The program is written in C# using .NET Framework and utilizes the System.Runtime.InteropServices library.
