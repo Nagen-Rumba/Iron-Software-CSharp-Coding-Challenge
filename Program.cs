@@ -44,7 +44,7 @@ public class PracticeApps
 
 
     //This function returns the numbers in sequence.
-    public static string checkSequence(string input)
+     public static string checkSequence(string input)
     {
         string outputText = "";
         string result = "";
@@ -63,7 +63,7 @@ public class PracticeApps
                 //Append to result if the characters change and set the loop 
                 else
                 {
-                    result += NumberToLetterMap[outputText];
+                    result += (outputText.Count() > 3 ? NumberToLetterMap[outputText[0].ToString()]: NumberToLetterMap[outputText]);
                     i = j;
                     j--;
                     outputText = "";
@@ -81,7 +81,7 @@ public class PracticeApps
                 }
                 if (input[j] == '#')
                 {
-                    result += NumberToLetterMap[outputText];
+                    result += (outputText.Count() > 3 ? NumberToLetterMap[outputText[0].ToString()] : NumberToLetterMap[outputText]);
                     i = input.Count() + 1;
                     break;
                 }
