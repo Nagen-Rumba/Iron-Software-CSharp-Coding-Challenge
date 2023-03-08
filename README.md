@@ -8,8 +8,6 @@ The checkSequence function takes a string of numbers as input and returns the co
 **Dictionary Mapping**
 The NumberToLetterMap dictionary contains a mapping of numbers to letters based on the T9 predictive text input method. For example, the number "2" maps to the letters "A", "B", and "C". The mapping is as follows:
 
-
-private static readonly Dictionary<string, string> NumberToLetterMap = new Dictionary<string, string> {
     {"1", "&"},
     {"11", "'"},
     {"111", "("},
@@ -42,7 +40,6 @@ private static readonly Dictionary<string, string> NumberToLetterMap = new Dicti
     {"0", " " },
     {"*", "*" },
     {"#", "" }
-};
 
 **Special Characters**
 The checkSequence function also supports the following special characters:
